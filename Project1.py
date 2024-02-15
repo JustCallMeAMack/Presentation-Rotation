@@ -1,12 +1,12 @@
-from random import choice
 from statistics import multimode
+import secrets
 
 rota = []
 students = ["Norm", "Gina", "Michael", "Jacob", "Rosa",
             "Raymond", "Terence", "Amy", "Charles", "Kevin"]
 
 for i in range(20):
-    selected = choice(students)
+    selected = secrets.SystemRandom().choice(students)
     rota.append(selected)
     print(f'For week {
           i+1}, {selected} has been selected to share a reflection.')
